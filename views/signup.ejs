@@ -16,7 +16,7 @@
         <div class="form-group mt-4">
           <input
             type="email"
-            class="form-control form-control-lg"
+            class="<%= validationErrors.find(e =>e.param === 'email') ? 'form-control form-control-lg border border-danger' : 'form-control form-control-lg' %>"
             placeholder="Email"
             name="email"
             id="email"
@@ -27,7 +27,7 @@
         <div class="form-group">
           <input
             type="password"
-            class="form-control form-control-lg"
+            class="<%= validationErrors.find(e =>e.param === 'password') ? 'form-control form-control-lg border border-danger' : 'form-control form-control-lg' %>"
             placeholder="Password"
             name="password"
             id="password"
@@ -38,7 +38,7 @@
          <div class="form-group">
           <input
             type="password"
-            class="form-control form-control-lg"
+            class="<%= validationErrors.find(e =>e.param === 'confirmPassword') ? 'form-control form-control-lg border border-danger' : 'form-control form-control-lg' %>"
             placeholder="Confirm Password"
             name="confirmPassword"
             id="confirmPassword"
