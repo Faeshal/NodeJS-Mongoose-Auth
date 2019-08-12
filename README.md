@@ -7,7 +7,8 @@
 
 This is update from previous project (Simple Fruit Shop App) using Mongodb Atlas with Mongoose &amp; NodeJS + Express &amp; Bootstrap 4.
 
-I'm adding Authentication & Register Functionality with Basic Cookie - Session understanding ( https://faeshal.com/post/express_auth )
+I'm adding Authentication & Register Functionality with Basic Cookie - Session understanding ( https://faeshal.com/post/express_auth ) with validation and sanitization on signup & login using express validator 
+(https://faeshal.com/post/express_validator)
 
 
 **Step Installation :**
