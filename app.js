@@ -9,13 +9,14 @@ const flash = require("connect-flash");
 const app = express();
 
 const adminRoutes = require("./routes/admin");
+const authRoutes = require("./routes/auth");
 
 // NOTE : Atlas
-const MONGODB_URI =
-  "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>";
+// const MONGODB_URI =
+//   "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<dbname>";
 
 // NOTE : Local
-// const MONGODB_URI = "mongodb://localhost:27017/shop";
+const MONGODB_URI = "mongodb://localhost:27017/shop";
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -39,6 +40,7 @@ app.use(
 );
 
 app.use(adminRoutes);
+app.use(authRoutes);
 
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true })
